@@ -1,7 +1,9 @@
 tableau.extensions.initializeDialogAsync().then(() => {
   let timer;
+  let interval = math.parseInt(document.getElementById("interval")) * 1000;
+  console.log("TCL: interval", interval);
   try {
-    timer = setInterval(refreshAllDataSources, 5000);
+    timer = setInterval(refreshAllDataSources, interval);
   } catch {
     clearInterval(timer);
   }
