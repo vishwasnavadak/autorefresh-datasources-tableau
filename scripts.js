@@ -2,7 +2,7 @@ $(document).ready(function() {
   tableau.extensions.initializeDialogAsync().then(() => {
     let timer;
     try {
-      timer = setInterval(refreshAllDataSources, 5000);
+      timer = setInterval(refreshAllDataSources, 10000);
       console.log("Refresh Started");
     } catch (err) {
       clearInterval(timer);
